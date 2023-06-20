@@ -8,6 +8,7 @@ void main() {
   runApp(
     ChangeNotifierProvider(
       create: (context) => ModelProvider(),
+    child: MyApp(),
     ),
   );
 }

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:parctical_task/provider/country_information_provider.dart';
 import 'package:provider/provider.dart';
 
 class mainpage extends StatefulWidget {
@@ -11,8 +12,14 @@ class mainpage extends StatefulWidget {
 class _mainpageState extends State<mainpage> {
   @override
   Widget build(BuildContext context) {
+    Provider.of<ModelProvider>(context , listen: false).getData();
     return Consumer(
-      builder: (context, provider, child) => Scaffold(),
+      builder: (context, provider, child) => FutureBuilder(
+        future: provider.getData(),
+        builder: (context, snapshot) {
+
+          },
+      )
     );
   }
 }
