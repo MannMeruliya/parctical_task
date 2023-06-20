@@ -12,14 +12,13 @@ class mainpage extends StatefulWidget {
 class _mainpageState extends State<mainpage> {
   @override
   Widget build(BuildContext context) {
-    Provider.of<ModelProvider>(context , listen: false).getData();
+    Provider.of<ModelProvider>(context).getData();
     return Consumer(
-      builder: (context, provider, child) => FutureBuilder(
-        future: provider.getData(),
-        builder: (context, snapshot) {
-
-          },
-      )
+      builder: (context, provider, child) => Scaffold(
+        body: Column(
+          children: [],
+        ),
+      ),
     );
   }
 }

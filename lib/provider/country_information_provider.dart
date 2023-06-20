@@ -16,7 +16,7 @@ class ModelProvider extends ChangeNotifier {
     notifyListeners();
   }
 
-  Future<Model> getData() async {
+    getData() async {
     String BASE_URL = "https://api.api-ninjas.com/v1/country";
     String name = "london";
 
