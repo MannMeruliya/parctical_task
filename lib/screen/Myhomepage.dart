@@ -13,7 +13,9 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("All Country Information"),
+        backgroundColor: Color(0xfff7f2f9),
+        title: Text("🌎 Country Information"),
+        centerTitle: true,
       ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -23,7 +25,7 @@ class _MyHomePageState extends State<MyHomePage> {
             child: Lottie.asset("assets/1.json", width: 200),
           ),
           SizedBox(
-            height: 50,
+            height: 150,
           ),
           Container(
               alignment: Alignment(0, 0.5),
