@@ -13,7 +13,7 @@ class _detailpageState extends State<detailpage> {
   @override
   Widget build(BuildContext context) {
     Provider.of<ModelProvider>(context).getData();
-    dynamic index = ModalRoute.of(context)!.settings.arguments;
+    // dynamic index = ModalRoute.of(context)!.settings.arguments;
     return Consumer<ModelProvider>(
       builder: (context, provider, child) => Scaffold(
         appBar: AppBar(
@@ -25,29 +25,164 @@ class _detailpageState extends State<detailpage> {
         body: SingleChildScrollView(
           physics: BouncingScrollPhysics(),
           child: Column(children: [
-            Card(
+            Padding(
+              padding: EdgeInsets.all(20),
               child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Text(
-                    "Country :- ${provider.ModelList[0]['name']}",
-                    style: TextStyle(fontSize: 20),
+                  Container(
+                    alignment: Alignment.centerLeft,
+                    width: double.infinity,
+                    height: 50,
+                    decoration: BoxDecoration(
+                      color: Color(0xfff7f2f9),
+                    ),
+                    child: Text(
+                      "Country :- ${provider.ModelList[0]['name']}",
+                      style: TextStyle(fontSize: 28),
+                    ),
                   ),
-                  Text(
-                    "GDP :- ${provider.ModelList[0]['gdp']}",
-                    style: TextStyle(fontSize: 20),
+                  SizedBox(height: 15,),
+                  Container(
+                    alignment: Alignment.centerLeft,
+                    width: double.infinity,
+                    height: 50,
+                    decoration: BoxDecoration(
+                      color: Color(0xfff7f2f9),
+                    ),
+                    child:  Text(
+                      "GDP :- ${provider.ModelList[0]['gdp']}",
+                      style: TextStyle(fontSize: 28),
+                    ),
                   ),
-                  Text(
-                    "Population :- ${provider.ModelList[0]['population']}",
-                    style: TextStyle(fontSize: 20),
+                  SizedBox(height: 15,),
+                  Container(
+                    alignment: Alignment.centerLeft,
+                    width: double.infinity,
+                    height: 50,
+                    decoration: BoxDecoration(
+                      color: Color(0xfff7f2f9),
+                    ),
+                    child:  Text(
+                      "Population :- ${provider.ModelList[0]['population']}",
+                      style: TextStyle(fontSize: 28),
+                    ),
                   ),
-                  Text(
-                    "Capital :- ${provider.ModelList[0]['capital']}",
-                    style: TextStyle(fontSize: 20),
+                  SizedBox(height: 15,),
+                  Container(
+                    alignment: Alignment.centerLeft,
+                    width: double.infinity,
+                    height: 50,
+                    decoration: BoxDecoration(
+                      color: Color(0xfff7f2f9),
+                    ),
+                    child:  Text(
+                      "Capital :- ${provider.ModelList[0]['capital']}",
+                      style: TextStyle(fontSize: 28),
+                    ),
                   ),
-                  Text(
-                    "Tourists :- ${provider.ModelList[0]['tourists']}",
-                    style: TextStyle(fontSize: 20),
+                  SizedBox(height: 15,),
+                  Container(
+                    alignment: Alignment.centerLeft,
+                    width: double.infinity,
+                    height: 50,
+                    decoration: BoxDecoration(
+                      color: Color(0xfff7f2f9),
+                    ),
+                    child: Text(
+                      "Tourists :- ${provider.ModelList[0]['tourists']}",
+                      style: TextStyle(fontSize: 28),
+                    ),
+                  ),
+                  SizedBox(height: 15,),
+                  Container(
+                    alignment: Alignment.centerLeft,
+                    width: double.infinity,
+                    height: 50,
+                    decoration: BoxDecoration(
+                      color: Color(0xfff7f2f9),
+                    ),
+                    child: Text(
+                      "Unemployment :- ${provider.ModelList[0]['unemployment']}",
+                      style: TextStyle(fontSize: 28),
+                    ),
+                  ),
+                  SizedBox(height: 15,),
+                  Container(
+                    alignment: Alignment.centerLeft,
+                    width: double.infinity,
+                    height: 80,
+                    decoration: BoxDecoration(
+                      color: Color(0xfff7f2f9),
+                    ),
+                    child: Text(
+                      "Currency :- ${provider.ModelList[0]['currency']}",
+                      style: TextStyle(fontSize: 25),
+                    ),
+                  ),
+                  SizedBox(height: 15,),
+                  Container(
+                    alignment: Alignment.centerLeft,
+                    width: double.infinity,
+                    height: 50,
+                    decoration: BoxDecoration(
+                      color: Color(0xfff7f2f9),
+                    ),
+                    child: Text(
+                      "Region :- ${provider.ModelList[0]['region']}",
+                      style: TextStyle(fontSize: 28),
+                    ),
+                  ),
+                  SizedBox(height: 15,),
+                  Container(
+                    alignment: Alignment.centerLeft,
+                    width: double.infinity,
+                    height: 50,
+                    decoration: BoxDecoration(
+                      color: Color(0xfff7f2f9),
+                    ),
+                    child: Text(
+                      "Exports :- ${provider.ModelList[0]['exports']}",
+                      style: TextStyle(fontSize: 28),
+                    ),
+                  ),
+                  SizedBox(height: 15,),
+                  Container(
+                    alignment: Alignment.centerLeft,
+                    width: double.infinity,
+                    height: 50,
+                    decoration: BoxDecoration(
+                      color: Color(0xfff7f2f9),
+                    ),
+                    child: Text(
+                      "Imports :- ${provider.ModelList[0]['imports']}",
+                      style: TextStyle(fontSize: 28),
+                    ),
+                  ),
+                  SizedBox(height: 15,),
+                  Container(
+                    alignment: Alignment.centerLeft,
+                    width: double.infinity,
+                    height: 50,
+                    decoration: BoxDecoration(
+                      color: Color(0xfff7f2f9),
+                    ),
+                    child: Text(
+                      "iso2 :- ${provider.ModelList[0]['iso2']}",
+                      style: TextStyle(fontSize: 28),
+                    ),
+                  ),
+                  SizedBox(height: 15,),
+                  Container(
+                    alignment: Alignment.centerLeft,
+                    width: double.infinity,
+                    height: 50,
+                    decoration: BoxDecoration(
+                      color: Color(0xfff7f2f9),
+                    ),
+                    child: Text(
+                      "Fertility :- ${provider.ModelList[0]['fertility']}",
+                      style: TextStyle(fontSize: 28),
+                    ),
                   ),
                 ],
               ),
