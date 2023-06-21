@@ -29,7 +29,7 @@ class _MyHomePageState extends State<MyHomePage> {
               alignment: Alignment(0, 0.5),
               child: ElevatedButton(
                   onPressed: () {
-                    Navigator.of(context).pushNamed('mainpage');
+                    Navigator.of(context).pushNamed('detailpage');
                   },
                   child: Text("Get Start"))),
         ],

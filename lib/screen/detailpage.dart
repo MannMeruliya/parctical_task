@@ -2,21 +2,24 @@ import 'package:flutter/material.dart';
 import 'package:parctical_task/provider/country_information_provider.dart';
 import 'package:provider/provider.dart';
 
-class mainpage extends StatefulWidget {
-  const mainpage({super.key});
+class detailpage extends StatefulWidget {
+  const detailpage({super.key});
 
   @override
-  State<mainpage> createState() => _mainpageState();
+  State<detailpage> createState() => _detailpageState();
 }
 
-class _mainpageState extends State<mainpage> {
+class _detailpageState extends State<detailpage> {
   @override
   Widget build(BuildContext context) {
     Provider.of<ModelProvider>(context).getData();
-    return Consumer(
+    dynamic index = ModalRoute.of(context)!.settings.arguments;
+    return Consumer<ModelProvider>(
       builder: (context, provider, child) => Scaffold(
         body: Column(
-          children: [],
+          children: [
+            Text("${provider.ModelList[index]['gdp']}")
+          ],
         ),
       ),
     );

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:parctical_task/provider/country_information_provider.dart';
 import 'package:parctical_task/screen/Myhomepage.dart';
-import 'package:parctical_task/screen/mainpage.dart';
+import 'package:parctical_task/screen/detailpage.dart';
 import 'package:provider/provider.dart';
 
 void main() {
@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       routes: {
         '/': (context) => MyHomePage(),
-        'mainpage': (context) => mainpage()
+        'detailpage': (context) => detailpage()
       },
       theme: ThemeData(
         useMaterial3: true,

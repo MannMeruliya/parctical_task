@@ -6,6 +6,10 @@ import 'package:http/http.dart' as http;
 import '../model/country_information_model.dart';
 
 class ModelProvider extends ChangeNotifier {
+
+  String BASE_URL = "https://api.api-ninjas.com/v1/country";
+  String name = "london";
+
   List ModelList = [];
   bool isLoading = false;
   late Model model;
@@ -16,9 +20,7 @@ class ModelProvider extends ChangeNotifier {
     notifyListeners();
   }
 
-    getData() async {
-    String BASE_URL = "https://api.api-ninjas.com/v1/country";
-    String name = "london";
+getData() async {
 
     Uri url = Uri.parse("$BASE_URL?name=$name");
     var response = await http.get(url, headers: {
@@ -26,7 +28,7 @@ class ModelProvider extends ChangeNotifier {
     });
     print("Status code :: ${response.statusCode}");
     if (response.statusCode == 200) {
-      ModelList = json.decode(response.body);
+      ModelList.addAll(json.decode(response.body));
       print(ModelList);
       print(ModelList.first['Model']);
       isLoading = false;
@@ -37,5 +39,6 @@ class ModelProvider extends ChangeNotifier {
         gravity: ToastGravity.BOTTOM,
       );
     }
+    isLoading = false;
   }
 }
